@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.bg {
+    background: url('https://s3.amazonaws.com/criterion-production/janus_stills/205-/1092id_1236_086_w1600.jpg') no-repeat center center/cover;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: brightness(100%);
+}
+
+.loading-text {
+    position: absolute;
+    right: 63%;
+    font-size: 20px;
+    color: bisque;
+}
+
+.intro-text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100px;
+    color: white;
+}
