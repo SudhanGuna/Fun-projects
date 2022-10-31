@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    /* background-color: rgb(244, 238, 238); */
+    background-color: transparent;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-slider {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .7s ease-in-out;
+}
+
+.left-slider>div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-slider h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(37, 45, 22);
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+.left-slider p {
+    font-family: monospace;
+    color: rgba(179, 186, 144, 0.932);
+    font-size: 15px;
+}
+
+.right-slider {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform .6s ease-in-out;
+
+}
+
+.right-slider>div {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+button {
+    background-color: rgb(207, 195, 156);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 15px;
+    color: rgb(237, 146, 18);
+}
+
+button:hover {
+    color: rgb(100, 60, 3);
+}
+
+button:focus {
+    outline: none;
+}
+
+.slider-container .action-buttons button {
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    z-index: 100;
+}
+
+.slider-container .action-buttons .down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+
+}
+
+.slider-container .action-buttons .up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
