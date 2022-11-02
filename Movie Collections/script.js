@@ -57,12 +57,14 @@ const changeSlider = function (direction) {
     const sliderHeight = sliderContainer.clientHeight;
     if (direction === 'up') {
         sliderIndex++;
+        //console.log(sliderIndex);
         if (sliderIndex > slideLength - 1) {
             sliderIndex = 0;
         }
 
     } else if (direction === 'down') {
         sliderIndex--;
+        //console.log(sliderIndex)
         if (sliderIndex < 0) {
             sliderIndex = slideLength - 1;
         }
