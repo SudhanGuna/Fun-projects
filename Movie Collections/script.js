@@ -1,6 +1,7 @@
-// Buttons
+// Movie Genre Buttons
 let genreButtonOne = document.querySelector('.genre-one');
 let genreButtonTwo = document.querySelector('.genre-two');
+let genreButtonThree = document.querySelector('.genre-three');
 
 // Slider container Elements
 let sliderContainer = document.getElementsByClassName('slider-container')[0];
@@ -14,10 +15,12 @@ let upButton = document.getElementsByClassName('up-button')[0];
 let downButton = document.getElementsByClassName('down-button')[0];
 let slideLength = rightSlider.querySelectorAll('div').length;
 
-// Movie genre elements
+// Movie genre container elements
 let moiveGenreOne = document.getElementById('movieOne');
 let movieGenreTwo = document.getElementById('movieTwo');
+let movieGenreThree = document.getElementById('movieThree');
 
+// Variables
 let sliderIndex = 0;
 
 
@@ -58,14 +61,14 @@ const changeSlider = function (direction) {
     const sliderHeight = sliderContainer.clientHeight;
     if (direction === 'up') {
         sliderIndex++;
-        console.log(sliderIndex);
+        //console.log(sliderIndex);
         if (sliderIndex > slideLength - 1) {
             sliderIndex = 0;
         }
 
     } else if (direction === 'down') {
         sliderIndex--;
-        console.log(sliderIndex)
+        //console.log(sliderIndex)
         if (sliderIndex < 0) {
             sliderIndex = slideLength - 1;
         }
@@ -77,7 +80,6 @@ const changeSlider = function (direction) {
 
 
 
-
 // Calling function for respective movie genre button
 genreButtonOne.addEventListener('click', function (event) {
     event.stopImmediatePropagation();
@@ -86,4 +88,8 @@ genreButtonOne.addEventListener('click', function (event) {
 genreButtonTwo.addEventListener('click', function (event) {
     event.stopImmediatePropagation();
     showContainer(movieGenreTwo);
+});
+genreButtonThree.addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
+    showContainer(movieGenreThree);
 });
