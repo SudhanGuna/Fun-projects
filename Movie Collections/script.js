@@ -18,11 +18,13 @@ let slideLength = rightSlider.querySelectorAll('div').length;
 let moiveGenreOne = document.getElementById('movieOne');
 let movieGenreTwo = document.getElementById('movieTwo');
 
+let sliderIndex = 0;
 
 
 // Function to show movies container
 const showContainer = function (element) {
     if (!element) return;
+    sliderIndex = 0;
     element.classList.remove('hidden');
     overlay.classList.remove('hidden');
     let index = Number(element.getAttribute('data-index'));
@@ -50,21 +52,20 @@ const closeContainerBox = function (element) {
 }
 
 // Function for Sliding right and left div elements in Slider container
-let sliderIndex = 0;
 // here we need last index 3 in order to match Nee dhane en ponvasntham poster to its text previously it was lunch box
 // so we to go top 300 so we subtract the length with 1 and get last index multiple by 100 for vh 
 const changeSlider = function (direction) {
     const sliderHeight = sliderContainer.clientHeight;
     if (direction === 'up') {
         sliderIndex++;
-        //console.log(sliderIndex);
+        console.log(sliderIndex);
         if (sliderIndex > slideLength - 1) {
             sliderIndex = 0;
         }
 
     } else if (direction === 'down') {
         sliderIndex--;
-        //console.log(sliderIndex)
+        console.log(sliderIndex)
         if (sliderIndex < 0) {
             sliderIndex = slideLength - 1;
         }
