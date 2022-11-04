@@ -81,11 +81,12 @@ button {
     padding: 10px;
     font-size: 15px;
     color: rgb(237, 146, 18);
+    transition: color 0.2s, background-color 0.4s;
 }
 
 button:hover {
-    color: rgb(100, 60, 3);
-    background-color: antiquewhite;
+    color: rgb(246, 231, 211);
+    background-color: rgb(93, 57, 9);
 }
 
 button:focus {
