@@ -62,37 +62,42 @@ button:hover {
 }
 
 h2.city {
-    color: rgb(220, 192, 157);
-    animation: fadeIn linear 0.5s;
+    color: rgb(210, 162, 104);
+    animation: fadeIn linear 1s;
+    margin: 0;
 }
 
 h1.temp {
+    position: absolute;
+    top: 33%;
+    left: 70%;
     color: rgb(163, 196, 74);
     margin: 0;
     margin-bottom: 0.5em;
     padding: 0;
-    animation: fadeIn linear 2s;
+    animation: fadeIn linear 4s;
 
 }
 
 .flex {
     display: flex;
     align-items: center;
-    animation: fadeIn linear 1s;
+    animation: fadeIn linear 1.8s;
 }
 
 .description {
-    color: rgb(171, 147, 29);
+    color: rgb(141, 128, 66);
     text-transform: capitalize;
     margin-right: 5px;
 }
 
 .humidity {
-    animation: fadeIn linear 3s;
+    animation: fadeIn linear 2.5s;
 }
 
 .wind {
-    animation: fadeIn linear 4s;
+    animation: fadeIn linear 3s;
+    margin-top: 5px;
 }
 
 @keyframes fadeIn {
@@ -114,4 +119,6 @@ h1.temp {
     margin: 5px;
     position: relative;
     color: rgb(245, 215, 122);
+    margin: 0;
+
 }
