@@ -1,5 +1,5 @@
 let weather = {
-    apiKey: "",
+    apiKey: "Key",
 
     fetchWeather: function (city) {
         fetch(
@@ -31,7 +31,21 @@ let weather = {
         document.querySelector(".description").innerHTML = description;
         document.querySelector(".wind").innerHTML = "wind: " + speed + "km/h";
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".card").classList.remove("hidden");
 
+    },
 
+    search: function () {
+        this.fetchWeather(document.querySelector(".search-bar").value)
+    },
+};
+
+document.querySelector(".search-btn").addEventListener("click", function () {
+    weather.search();
+});
+
+document.querySelector(".search-bar").addEventListener("keyup", function (event) {
+    if (event.key == "Enter") {
+        weather.search();
     }
-}
+});

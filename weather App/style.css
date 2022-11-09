@@ -9,16 +9,24 @@ body {
 }
 
 .card {
-    background: rgb(104, 56, 2);
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    background: rgba(88, 48, 2, 0.808);
     padding: 2em;
     border-radius: 5%;
     width: 100%;
     max-width: 500px;
     margin: 10px;
+    animation: fadeIn linear 0.5s;
+
 }
 
 .search {
     display: flex;
+    position: absolute;
+    top: 15%;
+    left: 42%;
     align-items: center;
     justify-content: center;
 }
@@ -53,9 +61,9 @@ button:hover {
     background: rgb(198, 142, 131);
 }
 
-.weather.loading {
-    margin: 5px;
-    color: rgb(245, 215, 122);
+h2.city {
+    color: rgb(220, 192, 157);
+    animation: fadeIn linear 0.5s;
 }
 
 h1.temp {
@@ -63,14 +71,47 @@ h1.temp {
     margin: 0;
     margin-bottom: 0.5em;
     padding: 0;
+    animation: fadeIn linear 2s;
+
 }
 
 .flex {
     display: flex;
     align-items: center;
+    animation: fadeIn linear 1s;
 }
 
 .description {
+    color: rgb(171, 147, 29);
     text-transform: capitalize;
     margin-right: 5px;
+}
+
+.humidity {
+    animation: fadeIn linear 3s;
+}
+
+.wind {
+    animation: fadeIn linear 4s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.hidden {
+    display: none;
+}
+
+.weather {
+    margin: 5px;
+    position: relative;
+    color: rgb(245, 215, 122);
 }
