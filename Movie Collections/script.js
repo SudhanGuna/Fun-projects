@@ -78,6 +78,28 @@ const changeSlider = function (direction) {
 
 }
 
+// Funtion to style hover effect accoding to cursor positon on genre buttons
+genreButtonOne.addEventListener("mouseover", function (show) {
+    const x = show.pageX - genreButtonOne.offsetLeft;
+    const y = show.pageY - genreButtonOne.offsetTop;
+    //console.log(x, y);
+    genreButtonOne.style.setProperty("--xpos", `${x}px`)
+    genreButtonOne.style.setProperty("--ypos", `${y}px`)
+})
+genreButtonTwo.addEventListener("mouseover", function (show) {
+    const x = show.pageX - genreButtonTwo.offsetLeft;
+    const y = show.pageY - genreButtonTwo.offsetTop;
+    //console.log(x, y);
+    genreButtonTwo.style.setProperty("--xpos", `${x}px`)
+    genreButtonTwo.style.setProperty("--ypos", `${y}px`)
+})
+genreButtonThree.addEventListener("mouseover", function (show) {
+    const x = show.pageX - genreButtonThree.offsetLeft;
+    const y = show.pageY - genreButtonThree.offsetTop;
+    //console.log(x, y);
+    genreButtonThree.style.setProperty("--xpos", `${x}px`)
+    genreButtonThree.style.setProperty("--ypos", `${y}px`)
+})
 
 
 // Calling function for respective movie genre button

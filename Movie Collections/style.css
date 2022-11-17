@@ -17,6 +17,7 @@ body {
 
 /* Genre Buttons */
 .genre-one {
+    position: relative;
     font-size: 2rem;
     font-weight: 600;
     padding: 20px;
@@ -28,10 +29,11 @@ body {
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     cursor: pointer;
-
+    overflow: hidden;
 }
 
 .genre-two {
+    position: relative;
     font-size: 2rem;
     font-weight: 600;
     padding: 20px;
@@ -41,9 +43,11 @@ body {
     color: rgb(119, 88, 3);
     border-radius: 10px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .genre-three {
+    position: relative;
     font-size: 2rem;
     font-weight: 600;
     padding: 20px;
@@ -55,6 +59,30 @@ body {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     cursor: pointer;
+    overflow: hidden;
+}
+
+.genre-one::before,
+.genre-two::before,
+.genre-three::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: rgb(252, 212, 188);
+    border-radius: 60%;
+    top: var(--ypos);
+    left: var(--xpos);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+    opacity: 50%;
+}
+
+.genre-one:hover::before,
+.genre-two:hover::before,
+.genre-three:hover::before {
+    width: 250px;
+    height: 250px;
 }
 
 /* Buttons */
@@ -74,6 +102,7 @@ body {
 
 }
 
+
 button {
     background-color: rgb(207, 195, 156);
     border: none;
@@ -83,6 +112,7 @@ button {
     color: rgb(237, 146, 18);
     transition: color 0.2s, background-color 0.4s;
 }
+
 
 button:hover {
     color: rgb(246, 231, 211);
