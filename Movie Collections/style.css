@@ -62,6 +62,7 @@ body {
     overflow: hidden;
 }
 
+/* For ripple effect */
 .genre-one::before,
 .genre-two::before,
 .genre-three::before {
