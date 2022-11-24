@@ -25,9 +25,7 @@ body {
     border: none;
     background-color: rgb(252, 212, 188);
     color: rgb(119, 88, 3);
-    border-radius: 5px;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
 }
@@ -55,9 +53,7 @@ body {
     border: none;
     background-color: rgb(252, 212, 188);
     color: rgb(119, 88, 3);
-    border-radius: 5px;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
 }
